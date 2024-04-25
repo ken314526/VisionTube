@@ -17,6 +17,7 @@ import {
 import { TbMusic, TbDeviceGamepad2 } from "react-icons/tb";
 import { FaRegCompass } from "react-icons/fa";
 import { GiFilmStrip } from "react-icons/gi";
+import { Link } from "react-router-dom";
 
 export default function Sidebar() {
   const mainLinks = [
@@ -129,10 +130,10 @@ export default function Sidebar() {
                 name === "Home" ? "bg-slate-600" : ""
               }`}
             >
-              <a href="#" className="flex items-center gap-5">
+              <Link to="/" className="flex items-center gap-5">
                 {icon}
                 <span className="text-sm tracking-wider">{name}</span>
-              </a>
+              </Link>
             </li>
           );
         })}
@@ -141,10 +142,10 @@ export default function Sidebar() {
         {secondaryLinks.map(({ icon, name }) => {
           return (
             <li key={name} className={`pl-6 py-3 hover:bg-zinc-600 `}>
-              <a href="#" className="flex items-center gap-5">
+              <Link to="/" className="flex items-center gap-5">
                 {icon}
                 <span className="text-sm tracking-wider">{name}</span>
-              </a>
+              </Link>
             </li>
           );
         })}
@@ -153,10 +154,10 @@ export default function Sidebar() {
         {subscriptionLinks.map(({ icon, name }) => {
           return (
             <li key={name} className={`pl-6 py-3 hover:bg-zinc-600 `}>
-              <a href="#" className="flex items-center gap-5">
+              <Link to="/" className="flex items-center gap-5">
                 {icon}
                 <span className="text-sm tracking-wider">{name}</span>
-              </a>
+              </Link>
             </li>
           );
         })}
@@ -165,10 +166,10 @@ export default function Sidebar() {
         {helpLinks.map(({ icon, name }) => {
           return (
             <li key={name} className={`pl-6 py-3 hover:bg-zinc-600 `}>
-              <a href="#" className="flex items-center gap-5">
+              <Link to="/" className="flex items-center gap-5">
                 {icon}
                 <span className="text-sm tracking-wider">{name}</span>
-              </a>
+              </Link>
             </li>
           );
         })}
@@ -183,7 +184,9 @@ export default function Sidebar() {
           return <li key={name}>{name}</li>;
         })}
       </ul>
-      <span className="px-4 text-sm text-zinc-400">&copy; 2022 Google</span>
+      <span className="px-4 text-sm text-zinc-400">
+        © 2024 • Abhishek Sharma
+      </span>
       <br />
       <p className="px-4 pt-3 text-sm text-zinc-400">
         This clone is for educational purpose only.
